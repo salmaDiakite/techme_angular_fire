@@ -1,0 +1,200 @@
+.blur-container {
+    background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+    border: 0.01rem solid #ffffff33;
+    position: relative;
+    z-index: 1;
+}
+
+.present-section {
+    background: linear-gradient(to right top, #f9f578, #ffe17d);
+    padding: calc(5vw + 1rem);
+
+    .blur-container {
+        @extend .blur-container;
+        border-top-right-radius: calc(19vw + 0.1rem);
+        border-bottom-left-radius: calc(4vw + 0.1rem);
+
+        .blur-content {
+            border-radius: inherit;
+            border-top-right-radius: 0;
+            padding: calc(3vw + 0.1rem);
+
+            .icon-text {
+                margin-top: 1rem;
+            }
+
+            mat-icon {
+                width: 1rem;
+                margin-right: 1.3rem;
+            }
+
+            button {
+                margin-top: 1rem;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                width: 45%;
+                font-size: 20px;
+                border-radius: 0.3rem;
+                transition: transform 250ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+
+            }
+
+            .btn-connect {
+                background-color: rgba(20, 20, 105, 0.966);
+                color: #ffffff;
+            }
+
+            .btn-insc {
+                background-color: rgba(255, 82, 14, 0.966);
+                color: #ffffff;
+            }
+
+            .big-txt,
+            h3 {
+                margin: 0;
+                font-weight: bold;
+                font-size: 2rem;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                opacity: 0.8;
+                line-height: 3rem;
+            }
+
+            .h-txt {
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+    .cercle1,
+    .cercle2 {
+        background: linear-gradient(to right bottom, #ffffffcc, #ffffff33);
+        backdrop-filter: blur(1rem);
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .cercle1 {
+        width: 30rem;
+        height: 30rem;
+        top: 2%;
+        right: 2%;
+    }
+    .cercle2 {
+        width: 15rem;
+        height: 15rem;
+        bottom: -5%;
+        left: 2%;
+    }
+}
+
+.feature-section {
+    margin: 4rem;
+
+    h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .feature-container {
+        article {
+            min-width: 16rem;
+            margin-bottom: 1rem;
+            margin: 0 1rem;
+
+            h1 {
+                margin-top: 2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            h3 {
+
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            a {
+                width: 40%;
+                font-size: 2rem;
+                text-align: center;
+                padding-left: 20px;
+                margin-bottom: 30px;
+                text-decoration: none;
+                color: #f86407;
+            }
+        }
+    }
+}
+
+.cta-section {
+    background: linear-gradient(to right top, #f9f578, #ffe17d);
+    padding: calc(5vw + 1rem);
+
+    .cta-container {
+        @extend .blur-container;
+        padding: 40px 30px;
+
+        .cta-img {
+            margin-bottom: 25px;
+
+            img {
+                @extend .blur-container
+            }
+
+            .img-custom-one {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .img-custom-two {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .cta-text {
+            margin-bottom: 25px;
+
+            >h1,
+            h3 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+            }
+
+            >h1 {
+                font-size: 35px;
+            }
+
+            >h3 {
+                font-size: 20px;
+            }
+        }
+
+        .cta-btn {
+            width: 100%;
+
+            button {
+                margin-top: 1rem;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                width: 20%;
+                font-size: 20px;
+                border-radius: 0.3rem;
+                transition: transform 250ms ease-in-out;
+                background-color: #31177f;
+                color: #ffffff;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+
+        }
+    }
+}
