@@ -1,0 +1,70 @@
+<div class="register">
+    <div class="register-container" fxLayout="row" fxLayoutAlign="center start">
+        <div class="register-infos" fxFlex="35" fxLayoutAlign="center start" fxShow="true" fxHide.sm="true"
+            fxHide.xs="true">
+            <div class="register-side-panel" fxFlex="80" fxLayout="column" fxLayoutAlign="center start">
+                <button mat-button class="mat-elevation-z1 arrow-back-btn">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <h1>{{title}}</h1>
+                <h3>{{desc}}</h3>
+                <h3 class="dj-btn">N'avez vous pas de compte ? <button mat-button (click)="inscriptionRoute()">S'inscrire</button></h3>
+                <img fxFlex="60" src="/images/6.svg" alt="">
+            </div>
+        </div>
+        <div class="register-form" fxFlex="65" fxLayout="column">
+            <div class="register-form-desc" fxFlex="80" fxLayout="column" fxLayoutAlign="center start">
+                <button mat-button class="mat-elevation-z1 arrow-back-btn" fxShow="true" fxHide.lg="true"
+                    fxHide.md="true">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <h1>Connexion sur {{title}}</h1>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam numquam ducimus ea nobis minus
+                    placeat
+                    nesciunt inventore provident assumenda sequi aliquid, animi pariatur esse nulla possimus hic error
+                    neque
+                    laudantium!</h4>
+            </div>
+            <div class="form-field" fxFlex="100" fxLayout="column">
+                <form>
+                    <div fxLayout="row wrap">
+                        <div fxFlex="25"></div>
+                        <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                            <mat-label>Prenom</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <div fxFlex="25"></div>
+                    </div>
+                    <div fxLayout="row wrap">
+                        <div fxFlex="25"></div>
+                        <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                            <mat-label>Mot de passe</mat-label>
+                            <input [type]="mShow ? 'text' : 'password'" matInput>
+                            <mat-icon (click)="mShow = !mShow" matSuffix>{{mShow ? 'visibility' :
+                                'visibility_off'}}</mat-icon>
+                        </mat-form-field>
+                        <div fxFlex="25"></div>
+                    </div>
+                </form>
+
+                <div fxFlex="50" class="cb-text">
+                    <div fxFlex="25"></div>
+
+                    <h3>
+                       <button mat-button>Mot de passe oublié</button>
+                    </h3>
+
+                    <div fxFlex="25"></div>
+                </div>
+
+                <div fxFlex="30" fxFlex.sm="100" fxFlex.xs="100" class="btn-custom">
+                    <div fxFlex="25" fxShow="true" fxHide.sm="true" fxHide.xs="true"></div>
+                    <button mat-raised-button>Creer mon compte</button>
+                    <div fxFlex="25" fxShow="true" fxHide.sm="true" fxHide.xs="true"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

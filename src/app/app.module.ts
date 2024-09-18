@@ -7,16 +7,25 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LangdingPageComponent } from './pages/langding-page/langding-page.component';
 import { MaterialUiModule } from './modules/material-ui/material-ui.module';
-
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { ConnexionComponent } from './pages/auth/connexion/connexion.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {AngularFireModule} from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    LangdingPageComponent
+    LangdingPageComponent,
+    RegisterComponent,
+    ConnexionComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     MaterialUiModule
   ],
   providers: [

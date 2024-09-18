@@ -1,0 +1,120 @@
+<div class="register">
+    <div class="register-container" fxLayout="row" fxLayoutAlign="center start">
+        <div class="register-infos" fxFlex="35" fxLayoutAlign="center start" fxShow="true" fxHide.sm="true"
+            fxHide.xs="true">
+            <div class="register-side-panel" fxFlex="80" fxLayout="column" fxLayoutAlign="center start">
+                <button mat-button class="mat-elevation-z1 arrow-back-btn">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <h1>{{title}}</h1>
+                <h3>{{desc}}</h3>
+                <h3 class="dj-btn">Deja membre ? <button mat-button (click)="connexionRoute()">Connectez vous</button>
+                </h3>
+                <img fxFlex="60" src="/images/6.svg" alt="">
+            </div>
+        </div>
+        <div class="register-form" fxFlex="65" fxLayout="column">
+            <div class="register-form-desc" fxFlex="80" fxLayout="column" fxLayoutAlign="center start">
+                <button mat-button class="mat-elevation-z1 arrow-back-btn" fxShow="true" fxHide.lg="true"
+                    fxHide.md="true">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <h1>Inscription sur {{title}}</h1>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam numquam ducimus ea nobis minus
+                    placeat
+                    nesciunt inventore provident assumenda sequi aliquid, animi pariatur esse nulla possimus hic error
+                    neque
+                    laudantium!</h4>
+            </div>
+            <div class="form-field" fxFlex="100" fxLayout="column">
+                <form [formGroup]="reactiveForm" (ngSubmit)="validForm()">
+                    <div fxLayout="column">
+                        <div fxLayout="row wrap">
+                            <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                                <mat-label>Prenom</mat-label>
+                                <input matInput formControlName="prenom">
+                                <div [ngStyle]="{
+                                    'color': 'red',
+                                    'font-size':'13px',
+                                    'font-family': 'Georgia'
+                                }"
+                                    *ngIf="reactFormControl?.['prenom']?.touched && reactFormControl?.['prenom']?.invalid">
+                                    Ce champ est requis.</div>
+                            </mat-form-field>
+                            <div fxFlex="4"></div>
+                            <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                                <mat-label>Nom</mat-label>
+                                <input matInput formControlName="nom">
+                                <div [ngStyle]="{
+                                    'color': 'red',
+                                    'font-size':'13px',
+                                    'font-family': 'Georgia'
+                                }"
+                                    *ngIf="reactFormControl?.['nom']?.touched && reactFormControl?.['nom']?.invalid">
+                                    Ce champ est requis.</div>
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field fxFlex="100" fxFlex.sm="100" fxFlex.xs="100">
+                                <mat-label>Adresse Email</mat-label>
+                                <input matInput formControlName="email">
+                                <div [ngStyle]="{
+                                    'color': 'red',
+                                    'font-size':'13px',
+                                    'font-family': 'Georgia'
+                                }"
+                                    *ngIf="reactFormControl?.['email']?.touched && reactFormControl?.['email']?.invalid">
+                                    Email invalid.</div>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row wrap">
+                            <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                                <mat-label>Mot de passe</mat-label>
+                                <input [type]="mShow ? 'text' : 'password'" matInput formControlName="password">
+                                <mat-icon (click)="mShow = !mShow" matSuffix>{{mShow ? 'visibility' :
+                                    'visibility_off'}}</mat-icon>
+                                <div [ngStyle]="{
+                                    'color': 'red',
+                                    'font-size':'13px',
+                                    'font-family': 'Georgia'
+                                }"
+                                    *ngIf="reactFormControl?.['password']?.touched && reactFormControl?.['password']?.invalid">
+                                    Ce champ est requis.</div>
+    
+                            </mat-form-field>
+                            <div fxFlex="4"></div>
+                            <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                                <mat-label>Confirmer mot de passe</mat-label>
+                                <input [type]="cmShow ? 'text' : 'password'" matInput formControlName="confirmPassword">
+                                <mat-icon (click)="cmShow =!cmShow" matSuffix>{{cmShow ? 'visibility' :
+                                    'visibility_off'}}</mat-icon>
+                                <div [ngStyle]="{
+                                        'color': 'red',
+                                        'font-size':'13px',
+                                        'font-family': 'Georgia'
+                                    }"
+                                    *ngIf="reactFormControl?.['confirmPassword']?.touched && reactFormControl?.['confirmPassword']?.invalid">
+                                    Ce champ est requis.</div>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="100" class="cb-text">
+                            <mat-checkbox (click)="check = !check">
+                                <h3>En creant votre compte vous acceptez nos <a href="">conditions generales</a>, notre <a
+                                        href="">politique de confidentialité</a> et les <a href="">notifications push</a>
+                                    intégrées.</h3>
+                            </mat-checkbox>
+                        </div>
+                        <div fxFlex="30" fxFlex.sm="100" fxFlex.xs="100" class="btn-custom">
+                            <button type="submit"  mat-raised-button [ngStyle]="{
+                                'background-color': check ? 'darkblue' : 'rgb(175, 175, 175)'
+                            }" [disabled]="check ? false : true">Creer mon compte</button>
+                        </div>
+                    </div>
+                </form>
+                
+
+            </div>
+
+        </div>
+    </div>
+</div>

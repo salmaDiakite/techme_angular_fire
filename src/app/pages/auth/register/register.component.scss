@@ -1,0 +1,80 @@
+.register{
+    .register-infos{
+        background: linear-gradient(to right top, #f9f578, #ffe17d);
+        padding: calc(4vw + 0.1rem);
+        .register-side-panel{
+            .arrow-back-btn{
+                margin-bottom: 15px;
+            }
+            h1,h3{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            h1{
+                font-weight: bold;
+            }
+            h3.dj-btn{
+                font-size: 15px;
+                button{
+                    color: darkblue;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+            }
+            img{
+                width: 85%;
+            }
+        }
+    }
+    .register-form{
+        padding: calc(4vw + 0.1rem);
+        .register-form-desc{
+            h1,h4{
+                font-family: Georgia;
+                text-align: center;
+            }
+            h1{
+                font-weight: bold;
+            }
+            h4{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.3rem;
+            }
+        }
+        .form-field{
+            .cb-text{
+                margin: 10px;
+                margin-bottom: 20px;
+                mat-checkbox{
+                    h3{
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 1rem;
+                        font-family: Georgia;
+                        a{
+                            color: darkblue;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                
+            }
+            .btn-custom{
+                button{
+                    width: 100%;
+                    background: darkblue;
+                    color: white;
+                    font-family: Georgia;
+                    font-weight: bold;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: transform 250ms ease-in-out;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+}
