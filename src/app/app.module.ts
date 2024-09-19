@@ -11,21 +11,29 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { ConnexionComponent } from './pages/auth/connexion/connexion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
+import { AccueilComponent } from './pages/social/accueil/accueil.component';
+import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 @NgModule({
   declarations: [
     AppComponent,
     LangdingPageComponent,
     RegisterComponent,
     ConnexionComponent,
+    AccueilComponent,
+    ForgetPasswordComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    AngularFirestoreModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     MaterialUiModule
   ],
   providers: [
