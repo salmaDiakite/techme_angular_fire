@@ -6,4 +6,5 @@ export interface Users {
     dNaissance : string;
     imgUrl: string;
     dInscription: string;
+    password: string;
 }

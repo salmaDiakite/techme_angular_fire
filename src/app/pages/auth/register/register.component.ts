@@ -73,13 +73,14 @@ export class RegisterComponent implements OnInit {
             email: this.reactiveForm.value.email,
             dNaissance: '',
             imgUrl: '',
-            dInscription: new Date().toISOString()
+            dInscription: new Date().toISOString(),
+            password : this.reactiveForm.value.password
           }
           await this.us.newUser(userData);
           await authResult.user?.sendEmailVerification()
           this.openGmail()
-          this.uts.showNotification('Un email vous a ete envoyer pour confirmer votre adresse email')
-          this.router.navigate(['connexion'])
+          this.uts.showNotification('Compte créé avec succes')
+          this.router.navigate(['email-verification'])
           
 
         } catch (error) {

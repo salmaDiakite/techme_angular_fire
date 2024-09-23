@@ -5,6 +5,8 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { ConnexionComponent } from './pages/auth/connexion/connexion.component';
 import { AccueilComponent } from './pages/social/accueil/accueil.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
+import { EmailVerificationComponent } from './pages/auth/email-verification/email-verification.component';
+import { FirebaseResolverService } from './services/auth/firebase-resolver.service';
 
 const routes: Routes = [
   {
@@ -31,6 +33,11 @@ const routes: Routes = [
   {
     path: 'forget-password',
     component: ForgetPasswordComponent
+  },
+  {
+    path: 'email-verification',
+    component: EmailVerificationComponent,
+    resolve : {user: FirebaseResolverService}
   }
 ];
 

@@ -16,6 +16,7 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
 import { AccueilComponent } from './pages/social/accueil/accueil.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
+import { EmailVerificationComponent } from './pages/auth/email-verification/email-verification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-pas
     ConnexionComponent,
     AccueilComponent,
     ForgetPasswordComponent,
+    EmailVerificationComponent,
     
   ],
   imports: [

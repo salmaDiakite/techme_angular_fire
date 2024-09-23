@@ -1,0 +1,30 @@
+<mat-progress-bar *ngIf="isProgressBar" mode="indeterminate">
+</mat-progress-bar>
+<div class="email-verification" >
+    <div class="email-container" *ngIf="!isEmailVerified" fxLayout="column">
+        <h1>Pour continuer {{title}} doit approuver votre adresse email.</h1>
+        <h2>{{title}} a envoyé un email sur cette adresse <strong>{{userEmail}}</strong> cliquez sur le lien qui vous a
+            été envoyé dans votre boite mail et votre compte sera approuvé. Vous pourrez ensuite selectionner les
+            categories de formations que vous voulez voir pour continuer. et si <strong>les categories</strong> ne
+            s'affichent pas automatiquement <span (click)="reloadCategory()">Cliquez ici</span></h2>
+        <button fxFlex.xs="100" fxFlexAlign="center" mat-flat-button color="warn" (click)="wrongEmail()">Mauvaise
+            adresse email</button>
+    </div>
+
+    <div class="categories-container" *ngIf="isEmailVerified" fxLayout="row" fxLayout.xs="column">
+
+        <div class="category-content" fxLayout="column" fxLayout.xs="column">
+            <h2>Veuillez selectionner au moins trois categories pour continuer dans <strong>{{title}}</strong></h2>
+            <div class="toggle-custom" fxLayout.xs="column">
+                <mat-button-toggle [style.font-family]="'Georgia'" #toggle
+                    [style.background]="toggle.checked ? cat.categoryColor : 'lightgray'"
+                    [style.color]="toggle.checked ? 'white' : 'black'"
+                    *ngFor="let cat of categorie | async">{{cat.categoryName}}</mat-button-toggle>
+            </div>
+            <div fxLayout.xs="column" class="btn-choices">
+                <button mat-flat-button class="btn-one">Tout selectionner</button>
+                <button mat-flat-button class="btn-two">Valider</button>
+            </div>
+        </div>
+    </div>
+</div>
