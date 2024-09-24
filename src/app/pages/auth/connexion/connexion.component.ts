@@ -49,6 +49,7 @@ export class ConnexionComponent implements OnInit {
           this.router.navigate(['accueil'])
         }else{
           this.uts.showNotification('Impossible de vous connecter veuillez d\'abord verifier votre email.')
+          this.router.navigate(['email-verification'])
         }
       } catch (error) {
         this.uts.showNotification("Veuillez d'abord creer un compte s'il vous plait")

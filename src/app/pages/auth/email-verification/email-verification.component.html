@@ -14,16 +14,19 @@
     <div class="categories-container" *ngIf="isEmailVerified" fxLayout="row" fxLayout.xs="column">
 
         <div class="category-content" fxLayout="column" fxLayout.xs="column">
-            <h2>Veuillez selectionner au moins trois categories pour continuer dans <strong>{{title}}</strong></h2>
+            
+            <h2>Veuillez selectionner au moins trois (3) categories pour continuer dans <strong>{{title}}</strong></h2>
             <div class="toggle-custom" fxLayout.xs="column">
-                <mat-button-toggle [style.font-family]="'Georgia'" #toggle
+                <mat-button-toggle [style.font-family]="'Georgia'" #toggle [value]="cat"
                     [style.background]="toggle.checked ? cat.categoryColor : 'lightgray'"
                     [style.color]="toggle.checked ? 'white' : 'black'"
-                    *ngFor="let cat of categorie | async">{{cat.categoryName}}</mat-button-toggle>
+                    *ngFor="let cat of categorie | async" (click)="choosenCategory(cat,toggle.checked)">{{cat.categoryName}}</mat-button-toggle>
             </div>
             <div fxLayout.xs="column" class="btn-choices">
                 <button mat-flat-button class="btn-one">Tout selectionner</button>
-                <button mat-flat-button class="btn-two">Valider</button>
+                <button mat-flat-button class="btn-two" [ngStyle]="{
+                    'background-color': minimumCategory ? 'darkblue' : 'lightgray'
+                }" [disabled]="minimumCategory ? 'false' : 'true'" (click)="saveCategories()" >Valider</button>
             </div>
         </div>
     </div>
