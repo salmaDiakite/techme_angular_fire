@@ -1,0 +1,104 @@
+.tab-container {
+    padding: 30px;
+
+    .tab-desc {
+        h1 {
+            font-family: Georgia;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+    .tab-desc-details{
+        font-family: Georgia;
+        font-size: 19px;
+    }
+    .tab-button{
+        button{
+            padding: 30px 50px;
+            background-color: white;
+            border-radius: 0;
+            font-family: Georgia;
+            font-weight: bold;
+            border: 0.5px solid black;
+            color: black;
+            transition: transform 250ms ease-in-out;
+
+            &:hover{
+                background-color: black;
+                color: white;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .formation-content{
+        margin-top: 30px;
+        width: 300px;
+        .formation-content-box{
+            margin-right: 30px;
+            
+            .formation-image{
+                img{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            .formation-title{
+                padding-left: 20px;
+                padding-right: 20px;
+                h1{
+                    font-family: Georgia;
+                    font-size: 15px;
+                    font-weight: bold;
+                    line-height: 1.7rem;
+                }
+            }
+            .formateur-name{
+                margin-top: -30px;
+                padding: 20px;
+                font-family: Georgia;
+                font-size: 10px;
+                line-height: 1.7rem;
+            }
+            .formation-ratings{
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: -20px;
+                h5{
+                    font-family: 'Times New Roman';
+                    font-weight: bold
+                };
+
+            }
+            .formation-price{
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-bottom: 20px;
+                h3{
+                    font-family: Georgia;
+                    font-size: 19px;
+                    font-weight: bold;
+                    line-height: 1.7rem;
+                }
+            }
+            .formation-button{
+                margin-top: -20px;
+                padding-left: 20px;
+                button{
+                    padding: 10px 40px;
+                    background-color: darkblue;
+                    border-radius: 0;
+                    font-family: Georgia;
+                    font-weight: bold;
+                    color: white;
+                    transition: transform 250ms ease-in-out;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

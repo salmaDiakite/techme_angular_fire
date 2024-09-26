@@ -17,6 +17,8 @@ import { environment } from '../environments/environment';
 import { AccueilComponent } from './pages/social/accueil/accueil.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 import { EmailVerificationComponent } from './pages/auth/email-verification/email-verification.component';
+import { TestComponent } from './pages/test/test.component';
+import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,8 @@ import { EmailVerificationComponent } from './pages/auth/email-verification/emai
     AccueilComponent,
     ForgetPasswordComponent,
     EmailVerificationComponent,
+    TestComponent,
+    EssaieTabsComponent,
     
   ],
   imports: [

@@ -108,6 +108,7 @@ export class EmailVerificationComponent implements OnInit {
       this.us.addUserChossenCategories(this.IDuser, category)
     })
     this.uts.showNotification("Categories sauvegardées avec succès")
+    this.router.navigate(['accueil'])
     this.isProgressBar = false
   }
 

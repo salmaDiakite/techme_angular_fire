@@ -1,0 +1,151 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    padding: 20px 30px;
+
+    .title {
+        font-family: Georgia;
+        font-size: 35px;
+        margin-right: 25px;
+    }
+
+    .mat-menu-position {
+        font-family: Georgia;
+        font-size: 25px;
+    }
+
+    a {
+        font-family: Georgia;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    button {
+        font-family: Georgia;
+        margin-right: 20px;
+        font-size: 18px;
+        border-radius: 0;
+        transition: transform 250ms ease-in-out;
+
+    }
+
+    .btn-one {
+        background-color: white;
+        border: 0.5px solid black;
+        color: black;
+
+        &:hover {
+            background-color: rgb(227, 227, 227);
+            color: black;
+            transform: scale(1.05);
+        }
+    }
+
+    .btn-two {
+        background-color: black;
+        border: 0.5px solid white;
+        color: white;
+
+        &:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.slider {
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 40px;
+
+    .slider-text {
+        padding: 20px 40px;
+        padding-bottom: 40px;
+        width: 400px;
+        height: 200px;
+        font-family: Georgia;
+        font-size: 20px;
+        color: black;
+        background-color: white;
+        position:absolute;
+        left: 150px;
+        top: 180px;
+
+        h1 {
+            font-family: Georgia;
+            font-size: 30px;
+            line-height: 1.7rem;
+            font-weight: bold;
+        }
+        button {
+            font-family: Georgia;
+            margin-right: 20px;
+            font-size: 18px;
+            border-radius: 0;
+            transition: transform 250ms ease-in-out;
+    
+        }
+
+        .btn-two {
+            background-color: black;
+            border: 0.5px solid white;
+            color: white;
+    
+            &:hover {
+                color: white;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .slider-img{
+       img{
+        width: calc(100vw - 170px);
+        height: 400px;
+       }
+    }
+}
+
+.partenaires{
+    background-color: rgba(239, 239, 239, 0.614);
+    padding: 20px 200px;
+    height: 200px;
+    .partenaires-text{
+        h1{
+            font-size: 20px;
+            font-family: Georgia;
+            text-align: center;
+            line-height: 1.7rem;
+            font-weight: bold;
+        }
+    }
+    .partenaires-logos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            img{
+                width: 120px;
+                height: 80px;
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
+.text-description{
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 30px;
+    h1{
+
+        font-family: Georgia;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    h5{
+        font-size: 28px;
+        font-family: Georgia;
+    }
+}

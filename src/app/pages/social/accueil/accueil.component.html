@@ -1,1 +1,59 @@
-<p>accueil works!</p>
+<mat-toolbar class="mat-elevation-z3">
+
+    <span class="title">T e c h M e</span>
+    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu">Categories</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Developpement</button>
+        <button mat-menu-item>Business</button>
+        <button mat-menu-item>Finance et comptabilité</button>
+    </mat-menu>
+    <span class="example-spacer"></span>
+    <a mat-button>TechMe business</a>
+    <a mat-button>Enseigner sur TechMe</a>
+    <button class="btn-one" mat-flat-button color="primary">Se connecter</button>
+    <button class="btn-two" mat-flat-button color="warn">S'inscrire</button>
+
+
+
+</mat-toolbar>
+
+<section class="slider">
+    <div class="slider-text">
+        <h1>Des compétences qui vous font évoluer</h1>
+        <p>La technologie et le monde du travail évoluent rapidement. Avec nous, vous êtes plus rapide. Obtenez les
+            compétences pour atteindre vos objectifs et rester compétitif.</p>
+        <button class="btn-two" mat-flat-button>Abonnement entreprises</button>
+    </div>
+    <div class="slider-img">
+        <img src="images/s1.webp" alt="">
+    </div>
+</section>
+<section class="partenaires">
+    <div class="partenaires-container" fxLayout="column">
+        <div class="partenaires-text" fxFlex="100" fxFlexLayout="center">
+            <h1>Plus de 16 000 entreprises et des millions de participants nous font confiance dans le monde entier</h1>
+        </div>
+        <div class="partenaires-logos" fxLayout="row">
+            <div class="logo">
+                <img src="images/mouna.png" alt="">
+            </div>
+            <div class="logo">
+                <img src="images/orange.png" alt="">
+            </div>
+            <div class="logo">
+                <img src="images/hadafo.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="text-description" fxLayout="column">
+    <h1>
+        Une large sélection de cours
+    </h1>
+    <h5>
+        Choisissez parmi plus de 250 000 vidéos de cours en ligne. De nouveaux cours sont ajoutés tous les mois
+    </h5>
+
+</section>
