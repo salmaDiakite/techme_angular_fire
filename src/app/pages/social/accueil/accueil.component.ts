@@ -18,6 +18,7 @@ export class AccueilComponent {
   prenom: string =''
   IDuser =''
   userData: Users[] = []
+modalite: any;
   // constructor(
   //   private actRoute: ActivatedRoute,
   //   private us: UsersService
