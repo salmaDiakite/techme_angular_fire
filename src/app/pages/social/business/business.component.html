@@ -1,18 +1,180 @@
-<mat-toolbar class="mat-elevation-z3">
+<mat-toolbar class="mat-elevation-z3" fxShow="true" fxHide.lg="true" fxHide.md="true">
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Ce que nous faisons</button>
+        <button mat-menu-item>Comment nous procedons</button>
+        <button mat-menu-item>Ressources</button>
+        <button mat-menu-item>Plans</button>
+        <button mat-menu-item>Se connecter</button>
+        <button mat-menu-item>S'inscrire</button>
+        
+    </mat-menu>
+    <span class="title"> TechMe | <span class="custom-span">Business</span></span>
+</mat-toolbar>
+<mat-toolbar class="mat-elevation-z3 custom-toolbar" fxShow="true" fxHide.sm="true" fxHide.xs="true">
 
-    <span class="title">TechMe | <span color="warn">Business</span></span>
-    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu">Categories</button>
+    <span class="title"> <button mat-button fxShow="true" fxHide.lg="true"
+            fxHide.md="true"><mat-icon>menu</mat-icon></button> TechMe | <span
+            class="custom-span">Business</span></span>
+    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.sm="true"
+        fxHide.xs="true">Ce que nous faisons</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Developpement</button>
+        <button mat-menu-item>Business</button>
+        <button mat-menu-item>Finance et comptabilité</button>
+    </mat-menu>
+    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.sm="true"
+        fxHide.xs="true">Comment nous procedons</button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item>Developpement</button>
         <button mat-menu-item>Business</button>
         <button mat-menu-item>Finance et comptabilité</button>
     </mat-menu>
     <span class="example-spacer"></span>
-    <a mat-button>TechMe business</a>
-    <a mat-button>Enseigner sur TechMe</a>
-    <button class="btn-one" mat-flat-button color="primary">Se connecter</button>
-    <button class="btn-two" mat-flat-button color="warn">S'inscrire</button>
-
-
-
+    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.sm="true"
+        fxHide.xs="true">Ressources</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Developpement</button>
+        <button mat-menu-item>Business</button>
+        <button mat-menu-item>Finance et comptabilité</button>
+    </mat-menu>
+    <button class="mat-menu-position" mat-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.sm="true"
+        fxHide.xs="true">Plans</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Developpement</button>
+        <button mat-menu-item>Business</button>
+        <button mat-menu-item>Finance et comptabilité</button>
+    </mat-menu>
+    <button mat-button fxShow="true" fxHide.sm="true" fxHide.xs="true">Se connecter</button>
+    <button class="btn-two" mat-flat-button color="warn" fxShow="true" fxHide.sm="true"
+        fxHide.xs="true">S'inscrire</button>
 </mat-toolbar>
+
+<section class="business">
+    <div class="business-container" fxlayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <div class="business-desc" fxFlex.md="35" fxFlex.lg="35" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column">
+            <h1>
+                Obtenez votre démonstration
+            </h1>
+            <h4>Indiquez-nous vos besoins et nous lancerons un plan personnalisé pour générer des résultats.</h4>
+            <h3>Avec Udemy en tant que partenaire d’apprentissage, vous pouvez :</h3>
+            <p class="custom-texts">
+                <mat-icon color="warn">check</mat-icon>
+                Former l’ensemble de votre personnel avec plus de + de 27 000 cours dans 16 langues
+            </p>
+            <p class="custom-texts">
+                <mat-icon color="warn">check</mat-icon>
+                Préparer vos employés à plus de 200 examens de certification reconnus dans le secteur
+            </p>
+            <p class="custom-texts">
+                <mat-icon color="warn">check</mat-icon>
+                Identifiez les lacunes en matière de compétences émergentes, les tendances en matière d’apprentissage et les données de référence sur le secteur
+            </p>
+            <p class="custom-texts">
+                <mat-icon color="warn">check</mat-icon>
+                Développez des équipes techniques hautement qualifiées à l’aide d’environnements sécurisés de travaux pratiques
+            </p>
+            <p class="custom-texts">
+                <mat-icon color="warn">check</mat-icon>
+                Intégrer le contenu à votre système de gestion de l’apprentissage existant
+            </p>
+        </div>
+        <div class="business-form" fxFlex.md="65" fxFlex.lg="65" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column">
+            <h1>Completer ce formulaire</h1>
+            <div fxLayout="row wrap">
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Prenom</mat-label>
+                    <input type="text" matInput>
+
+
+                </mat-form-field>
+                <div fxFlex="4"></div>
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Nom de famille</mat-label>
+                    <input type="text" matInput>
+
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field fxFlex="100" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Email Professionnel</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field fxFlex="100" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Numéro de telephone</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field fxFlex="100" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Ou vous trouver vous ?</mat-label>
+                    <mat-select formControlName="genre">
+                        <mat-option value="homme">Conakry</mat-option>
+                        <mat-option value="femme">Kindia</mat-option>
+                        <mat-option value="complique">Autres</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field fxFlex="100" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Nom de l'entreprise</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row wrap">
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Taille de l'entreprise</mat-label>
+                    <mat-select>
+                        <mat-option value="homme">je suis un sous traitant/travailleur indépendant</mat-option>
+                        <mat-option value="femme">1 à 199</mat-option>
+                        <mat-option value="complique">200 à 999</mat-option>
+                        <mat-option value="complique">1000 à 5000</mat-option>
+                        <mat-option value="complique">+ de 5001</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div fxFlex="4"></div>
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Nombre de personne à former</mat-label>
+                    <mat-select>
+                        <mat-option value="homme">+ de 2001</mat-option>
+                        <mat-option value="femme">201 à 2000</mat-option>
+                        <mat-option value="complique">51 à 50</mat-option>
+                        <mat-option value="complique">21 à 5000</mat-option>
+                        <mat-option value="complique">11 à 20</mat-option>
+                        <mat-option value="complique">1 à 10</mat-option>
+                        <mat-option value="complique">Moi uniquement</mat-option>
+                    </mat-select>
+
+                </mat-form-field>
+            </div>
+            <div fxLayout="row wrap">
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Titre du poste</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+                <div fxFlex="4"></div>
+                <mat-form-field fxFlex="48" fxFlex.sm="100" fxFlex.xs="100">
+                    <mat-label>Niveau de responsabilité</mat-label>
+                    <mat-select>
+                        <mat-option value="homme">+ de 2001</mat-option>
+                        <mat-option value="femme">201 à 2000</mat-option>
+                        <mat-option value="complique">51 à 50</mat-option>
+                        <mat-option value="complique">21 à 5000</mat-option>
+                        <mat-option value="complique">11 à 20</mat-option>
+                        <mat-option value="complique">1 à 10</mat-option>
+                        <mat-option value="complique">Moi uniquement</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxFlex="30" fxFlex.sm="100" fxFlex.xs="100" class="btn-custom">
+                <button type="submit" mat-raised-button>Creer mon compte</button>
+            </div>
+            <h3 class="disclaimer">En creant votre compte vous acceptez nos <a href="">conditions generales</a>, notre
+                <a href="">politique de confidentialité</a> et les <a href="">notifications push</a>
+                intégrées.</h3>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

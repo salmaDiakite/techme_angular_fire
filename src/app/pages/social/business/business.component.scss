@@ -1,18 +1,38 @@
 .example-spacer {
     flex: 1 1 auto;
 }
-mat-toolbar {
-    padding: 20px 30px;
+mat-toolbar{
+    .title {
+        font-family: Georgia;
+        font-size: 25px;
+        margin-right: 25px;
+        .custom-span{
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+        }
+    }
+}
+.custom-toolbar {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
 
     .title {
         font-family: Georgia;
-        font-size: 35px;
+        font-size: 25px;
         margin-right: 25px;
+        .custom-span{
+            font-size: 20px;
+            font-weight: bold;
+            color: darkblue;
+        }
     }
 
     .mat-menu-position {
         font-family: Georgia;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     a {
@@ -50,6 +70,83 @@ mat-toolbar {
         &:hover {
             color: white;
             transform: scale(1.05);
+        }
+    }
+}
+
+.business{
+    .business-container{
+        padding-top: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        .business-desc{
+            h1,h3,h4{
+                font-family: Georgia;
+            }
+            h1{
+                font-weight: bold;
+                font-size: 35px;
+                line-height: 2.7rem;
+            }
+            h4{
+                font-size: 20px;
+                line-height: 1.5rem;
+                color: rgb(170, 170, 170);
+            }
+            h3{
+                margin-top: 30px;
+                font-size: 25px;
+                line-height: 1.7rem;
+                font-weight: bold;
+            }
+            .custom-texts{
+                display: flex;
+                justify-content: center;
+                font-family: Georgia;
+                margin-top: 20px;
+                font-weight: 500;
+                mat-icon{
+                    padding-right: 10px;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .business-form{
+            
+            h1{
+                font-family: Georgia;
+                font-size: 35px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            .btn-custom{
+                button{
+                    width: 100%;
+                    background: black;
+                    color: white;
+                    font-family: Georgia;
+                    font-weight: bold;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 0;
+                    transition: transform 250ms ease-in-out;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            .disclaimer{
+                    font-size: 15px;
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                    font-weight: 500;
+                    line-height: 1rem;
+                    font-family: Georgia;
+                    a{
+                        color: darkblue;
+                        text-decoration: none;
+                    }
+            }
         }
     }
 }
