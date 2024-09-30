@@ -149,3 +149,33 @@ mat-toolbar {
         font-family: Georgia;
     }
 }
+.section3{
+    padding: calc(3vw + 1rem);
+}
+.section4{
+    padding: calc(3vw + 1rem);
+    .content4{
+        padding: calc(3vw + 1rem);
+    }
+    .btn{
+        justify-content: space-between;
+    }
+}
+.section5{
+    padding: calc(3vw + 1rem);
+    .content5{
+        padding: calc(3vw + 1rem);
+    }
+}
+.section6{
+    background-color: rgb(46, 43, 43);
+    padding: calc(5vw + 1rem);
+    a{
+        //text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    button{
+        margin-bottom: 3rem;
+    }
+}
