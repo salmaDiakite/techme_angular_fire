@@ -19,6 +19,9 @@ import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-pas
 import { EmailVerificationComponent } from './pages/auth/email-verification/email-verification.component';
 import { TestComponent } from './pages/test/test.component';
 import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
+import { BusinessComponent } from './pages/social/business/business.component';
+import { ToolbarComponent } from './pages/include/toolbar/toolbar.component';
+import { FooterComponent } from './pages/include/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,9 @@ import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
     EmailVerificationComponent,
     TestComponent,
     EssaieTabsComponent,
+    BusinessComponent,
+    ToolbarComponent,
+    FooterComponent,
     
   ],
   imports: [
