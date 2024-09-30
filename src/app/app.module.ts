@@ -22,6 +22,7 @@ import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 import { BusinessComponent } from './pages/social/business/business.component';
 import { ToolbarComponent } from './pages/include/toolbar/toolbar.component';
 import { FooterComponent } from './pages/include/footer/footer.component';
+import { ModaliteComponent } from './pages/social/modalite/modalite.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { FooterComponent } from './pages/include/footer/footer.component';
     BusinessComponent,
     ToolbarComponent,
     FooterComponent,
+    ModaliteComponent,
     
   ],
   imports: [

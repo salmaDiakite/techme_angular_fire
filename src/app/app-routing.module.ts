@@ -10,9 +10,9 @@ import { FirebaseResolverService } from './services/auth/firebase-resolver.servi
 import { TestComponent } from './pages/test/test.component';
 import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 import { BusinessComponent } from './pages/social/business/business.component';
+import { ModaliteComponent } from './pages/social/modalite/modalite.component';
 import { AuthGuardService } from './services/guard/auth-guard.service';
 import { AvoidGuadService } from './services/guard/avoid-guad.service';
-
 const routes: Routes = [
   {
     path:'',
@@ -56,6 +56,10 @@ const routes: Routes = [
   {
     path:'teachMe-business',
     component: BusinessComponent
+  },
+  {
+    path:'modalite',
+    component: ModaliteComponent
   }
 ];
 
