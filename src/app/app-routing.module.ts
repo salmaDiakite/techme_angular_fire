@@ -10,6 +10,8 @@ import { FirebaseResolverService } from './services/auth/firebase-resolver.servi
 import { TestComponent } from './pages/test/test.component';
 import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 import { BusinessComponent } from './pages/social/business/business.component';
+import { AuthGuardService } from './services/guard/auth-guard.service';
+import { AvoidGuadService } from './services/guard/avoid-guad.service';
 
 const routes: Routes = [
   {
@@ -23,16 +25,19 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component:RegisterComponent
+    component:RegisterComponent,
+    canActivate: [AvoidGuadService]
   },
   {
     path: 'connexion',
-    component:ConnexionComponent
+    component:ConnexionComponent,
+    canActivate: [AvoidGuadService]
   },
   {
     path:'accueil',
     component:AccueilComponent,
-    resolve : {user: FirebaseResolverService}
+    resolve : {user: FirebaseResolverService},
+    canActivate: [AuthGuardService]
   },
   {
     path: 'forget-password',
