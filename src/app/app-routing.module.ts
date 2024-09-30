@@ -9,6 +9,7 @@ import { EmailVerificationComponent } from './pages/auth/email-verification/emai
 import { FirebaseResolverService } from './services/auth/firebase-resolver.service';
 import { TestComponent } from './pages/test/test.component';
 import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
+import { BusinessComponent } from './pages/social/business/business.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'try',
     component: TestComponent
+  },
+  {
+    path:'teachMe-business',
+    component: BusinessComponent
   }
 ];
 

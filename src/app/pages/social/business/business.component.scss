@@ -1,0 +1,55 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+mat-toolbar {
+    padding: 20px 30px;
+
+    .title {
+        font-family: Georgia;
+        font-size: 35px;
+        margin-right: 25px;
+    }
+
+    .mat-menu-position {
+        font-family: Georgia;
+        font-size: 25px;
+    }
+
+    a {
+        font-family: Georgia;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    button {
+        font-family: Georgia;
+        margin-right: 20px;
+        font-size: 18px;
+        border-radius: 0;
+        transition: transform 250ms ease-in-out;
+
+    }
+
+    .btn-one {
+        background-color: white;
+        border: 0.5px solid black;
+        color: black;
+
+        &:hover {
+            background-color: rgb(227, 227, 227);
+            color: black;
+            transform: scale(1.05);
+        }
+    }
+
+    .btn-two {
+        background-color: black;
+        border: 0.5px solid white;
+        color: white;
+
+        &:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+    }
+}
