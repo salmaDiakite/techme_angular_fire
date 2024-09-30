@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  public isLogged: boolean = false
+
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
 
   registerUser(email: string, password: string){
@@ -15,17 +17,21 @@ export class AuthService {
 
   //Methode permettant a l'utilisateur de se connecter
   loginUser(email: string, password: string){
+    this.isLogged = true
     return this.afAuth.signInWithEmailAndPassword(email, password);
   }
   //methode permettant a l'utilisateur de se deconnecter
   logoutUser(){
     this.afAuth.signOut();
-    this.router.navigate(['']);
   }
   
   //Methode permettant a l'utilisateur de modifier son mot de passe
   updatePassword(email: string){
     return this.afAuth.sendPasswordResetEmail(email);
+  }
+
+  isAuthenticated() {
+    return this.isLogged
   }
 
   
