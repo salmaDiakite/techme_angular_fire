@@ -13,7 +13,7 @@ import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 const routes: Routes = [
   {
     path:'',
-    redirectTo: 'accueil',
+    redirectTo: 'LandingPage',
     pathMatch: 'full'
   },
   {
