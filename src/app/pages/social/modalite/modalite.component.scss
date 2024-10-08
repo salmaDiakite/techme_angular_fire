@@ -1,0 +1,118 @@
+.container{
+    background-color: rgb(247, 247, 54);
+    font-family: 'Times New Roman';
+    padding: 100px;
+    color: white;
+    h1{
+        font-family: 'Times New Roman';
+        color: white;
+        font-weight: bold;
+       
+    }
+    h3{
+        font-family: 'Times New Roman';
+        color: white;
+    
+    }
+    .formation-ratings {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+        mat-icon{
+            font-size: 20px;
+            margin-top: 10px;
+            
+        }
+
+        .vente{
+            font-family: 'Times New Roman';
+            background-color: rgb(244, 244, 159);
+            padding: 5px;
+            color: black;
+            margin-top: 10px;
+        }
+
+        h5 {
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left: 5px;
+            font-size: 20px;
+        }
+        .nbr{
+            font-size: 18px;
+            margin-left: 5px;
+            margin-top: 12px;
+        }
+        .image{
+            margin: 100px;
+        }
+
+    }
+    .update{
+        mat-icon{
+            padding: 10px;
+        }
+    }
+    p{
+        margin-top: 10px;
+    }
+}
+
+.pricing-container{
+    font-family: 'Times New Roman';
+    padding: 100px;
+    background-color: rgb(252, 252, 245);
+    
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .pricing{
+            
+            .plan1{
+                border: 2px solid #c4c1c1;
+                padding: 50px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                background-color: white;
+              p{
+                 margin-top: -8px;
+                 mat-icon{
+                    margin-top: -13px;
+                 }
+              }
+              h2{
+                 text-align: center;
+                 font-weight: bold;
+              }
+              h3{
+                margin-bottom: 20px;
+              }
+              .formation-button {
+                padding-left: 20px;
+                padding-top: 10px;
+
+                button {
+                    padding: 10px 40px;
+                    background-color: rgb(222, 53, 34);
+                    border-radius: 5px;
+                    font-family: Georgia;
+                    font-weight: bold;
+                    color: white;
+                    transition: transform 250ms ease-in-out;
+
+                    &:hover {
+                        background-color: rgb(99, 177, 232);
+                        color: white;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+              
+            }
+        }
+    
+}
