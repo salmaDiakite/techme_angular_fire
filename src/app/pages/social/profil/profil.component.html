@@ -1,0 +1,130 @@
+<app-toolbar></app-toolbar>
+<section class="photos" >
+    <div class="photos-container">
+        <div class="photos-cover">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div class="photos-profil">
+            <img src="images/9.jpeg" alt="">
+            <h2>{{userData?.prenom}} {{userData?.nom}}</h2>
+            <p>{{userData?.profession}}</p>
+        </div>
+    </div>
+</section>
+<section class="profil-content">
+    <div class="profil-content-container" fxLayout="row" fxLayoutGap="50">
+        <div class="mes-cours" fxFlex="65" fxLayout="column">
+            <div class="mes-cours-text">
+                <h1>
+                    Mon apprentissage
+                </h1>
+                <p>
+                    Apprendre un petit peu chaque jour est une méthode efficace. Des études ont montré que les
+                    participants qui ont établi une routine d'apprentissage sont plus susceptibles d'atteindre leurs
+                    objectifs. Programmez-vous du temps pour apprendre et recevez des rappels grâce à votre
+                    planificateur d'apprentissage.
+                </p>
+                <button mat-flat-button>Aller à mon apprentissage</button>
+            </div>
+            <div class="formation-content" fxLayout="row">
+                <div class="formation-content-box" fxLayout="column">
+                    <div class="formation-image">
+                        <img src="images/6.svg" alt="">
+                    </div>
+                    <div class="formation-title">
+                        <h1>
+                            Developpement Mobile: Formation complete 2024
+                        </h1>
+                    </div>
+                    <div class="formateur-name">
+                        <p>Hassan bangoura | Developpement Mobile</p>
+                    </div>
+                    <div class="formation-ratings" fxLayout="row">
+                        <h5>4.8</h5>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                    </div>
+                    <div class="formation-price">
+                        <h3>500.000 GNF</h3>
+                    </div>
+                    <div class="formation-button">
+                        <button mat-flat-button color="primary">Ajouter au panier</button>
+                    </div>
+
+                </div>
+                <div class="formation-content-box" fxLayout="column">
+                    <div class="formation-image">
+                        <img src="images/7.jpg" alt="">
+                    </div>
+                    <div class="formation-title">
+                        <h1>
+                            Application Native: Developper des logiciels natifs
+                        </h1>
+                    </div>
+                    <div class="formateur-name">
+                        <p>Hassan bangoura | Developpement Mobile</p>
+                    </div>
+                    <div class="formation-ratings" fxLayout="row">
+                        <h5>4.8</h5>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                    </div>
+                    <div class="formation-price">
+                        <h3>450.000 GNF</h3>
+                    </div>
+                    <div class="formation-button">
+                        <button mat-flat-button color="primary">Ajouter au panier</button>
+                    </div>
+
+                </div>
+
+                <div class="formation-content-box" fxLayout="column">
+                    <div class="formation-image">
+                        <img src="images/8.jpg" alt="">
+                    </div>
+                    <div class="formation-title">
+                        <h1>
+                            Analyse de données: application de gestion de données
+                        </h1>
+                    </div>
+                    <div class="formateur-name">
+                        <p>Aboubacar Diallo | Developpement Mobile</p>
+                    </div>
+                    <div class="formation-ratings" fxLayout="row">
+                        <h5>4.8</h5>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                        <mat-icon class="mat-icon-large" color="warn">star</mat-icon>
+                    </div>
+                    <div class="formation-price">
+                        <h3>750.000 GNF</h3>
+                    </div>
+                    <div class="formation-button">
+                        <button mat-flat-button color="primary">Ajouter au panier</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mes-infos" fxFlex="35">
+            <h1>Informations personnelles</h1>
+            <div class="mes-infos-content">
+                <h2>Nom et Prénom</h2>
+                <p >{{userData?.prenom}} {{userData?.nom}}</p>
+                <h2>Email</h2>
+                <p>{{userData?.email}}</p>
+                <h2 *ngIf="userData?.numero_tel != ''">Téléphone</h2>
+                <p >{{userData?.numero_tel}}</p>
+                <h2 *ngIf="userData?.adresse_log != ''">Adresse</h2>
+                <p>{{userData?.adresse_log}}</p>
+                <button mat-flat-button (click)="completeProfil()">Completer mon profil</button>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer class="footer"></app-footer>

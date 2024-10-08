@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { ConnexionComponent } from './pages/auth/connexion/connexion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
@@ -22,7 +23,8 @@ import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 import { BusinessComponent } from './pages/social/business/business.component';
 import { ToolbarComponent } from './pages/include/toolbar/toolbar.component';
 import { FooterComponent } from './pages/include/footer/footer.component';
-import { ModaliteComponent } from './pages/social/modalite/modalite.component';
+import { ProfilComponent } from './pages/social/profil/profil.component';
+import { CompleteProfileComponent } from './pages/social/complete-profile/complete-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import { ModaliteComponent } from './pages/social/modalite/modalite.component';
     BusinessComponent,
     ToolbarComponent,
     FooterComponent,
-    ModaliteComponent,
+    ProfilComponent,
+    CompleteProfileComponent,
     
   ],
   imports: [
@@ -48,10 +51,12 @@ import { ModaliteComponent } from './pages/social/modalite/modalite.component';
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    MaterialUiModule
+    MaterialUiModule,
+    AngularFireStorageModule
+    
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

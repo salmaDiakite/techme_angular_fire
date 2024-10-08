@@ -72,7 +72,12 @@ export class RegisterComponent implements OnInit {
             nom: this.reactiveForm.value.nom,
             email: this.reactiveForm.value.email,
             dNaissance: '',
-            imgUrl: '',
+            adresse_log: '',
+            profession: '',
+            numero_tel: '',
+            coverImg: '',
+            profilImg: '',
+            genre:'',
             dInscription: new Date().toISOString(),
             password : this.reactiveForm.value.password
           }

@@ -13,14 +13,18 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 const materialsModule=[
   MatIconModule,
   MatButtonModule,
   MatFormFieldModule,
   MatCardModule,
   MatTabsModule,
+  MatStepperModule,
   MatInputModule,
   MatMenuModule,
+  MatDatepickerModule,
   MatCheckboxModule,
   MatSnackBarModule,
   MatProgressBarModule,

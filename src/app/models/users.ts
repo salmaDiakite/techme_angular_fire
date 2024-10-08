@@ -3,8 +3,13 @@ export interface Users {
     prenom: string;
     nom: string;
     email: string;
+    numero_tel: string;
+    adresse_log: string;
+    profession: string;
     dNaissance : string;
-    imgUrl: string;
+    profilImg: string;
+    coverImg: string;
+    genre:string;
     dInscription: string;
     password: string;
 }

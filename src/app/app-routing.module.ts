@@ -10,9 +10,11 @@ import { FirebaseResolverService } from './services/auth/firebase-resolver.servi
 import { TestComponent } from './pages/test/test.component';
 import { EssaieTabsComponent } from './pages/essaie-tabs/essaie-tabs.component';
 import { BusinessComponent } from './pages/social/business/business.component';
-import { ModaliteComponent } from './pages/social/modalite/modalite.component';
 import { AuthGuardService } from './services/guard/auth-guard.service';
 import { AvoidGuadService } from './services/guard/avoid-guad.service';
+import { ProfilComponent } from './pages/social/profil/profil.component';
+import { CompleteProfileComponent } from './pages/social/complete-profile/complete-profile.component';
+
 const routes: Routes = [
   {
     path:'',
@@ -58,8 +60,16 @@ const routes: Routes = [
     component: BusinessComponent
   },
   {
-    path:'modalite',
-    component: ModaliteComponent
+    path: 'profil',
+    component: ProfilComponent,
+    resolve : {user: FirebaseResolverService},
+    canActivate: [AuthGuardService]
+  },
+  {
+    path:'complete-profil',
+    component: CompleteProfileComponent,
+    resolve : {user: FirebaseResolverService},
+    canActivate: [AuthGuardService]
   }
 ];
 
