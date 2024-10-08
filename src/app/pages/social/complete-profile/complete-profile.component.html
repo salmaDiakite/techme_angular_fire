@@ -1,0 +1,93 @@
+<app-toolbar></app-toolbar>
+<section class="stepper">
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup" (ngSubmit)="firstFormValues()">
+                <ng-template matStepLabel>Informations personnelles</ng-template>
+                <div class="inline-input" fxLayout="row" fxLayout.xs="column">
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Votre Prenom</mat-label>
+                        <input matInput placeholder="Prenom" formControlName="prenom" [disabled]="false"
+                            [value]="userData?.prenom">
+                    </mat-form-field>
+                    <div fxFlex="4"></div>
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Votre Nom</mat-label>
+                        <input matInput placeholder="Nom"  formControlName="nom" [disabled]="false"
+                            [value]="userData?.nom">
+                    </mat-form-field>
+                </div>
+                <div class="inline-input" fxLayout="row" fxLayout.xs="column">
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Adresse de logement</mat-label>
+                        <input matInput placeholder="Votre quartier s'il vous plait" formControlName="adresse_log">
+                    </mat-form-field>
+                    <div fxFlex="4"></div>
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Votre Genre</mat-label>
+                        <input matInput placeholder="Votre genre s'il vous plait" formControlName="genre">
+                    </mat-form-field>
+                </div>
+                <div class="inline-input" fxLayout="row" fxLayout.xs="column">
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Votre Profesion</mat-label>
+                        <input matInput placeholder="Votre profession s'il vous plait" formControlName="profession">
+                    </mat-form-field>
+                    <div fxFlex="4"></div>
+                    <mat-form-field fxFlex="48">
+                        <mat-label>Votre numero de telephone</mat-label>
+                        <input matInput placeholder="Votre numero de telephone" formControlName="numero_tel">
+                    </mat-form-field>
+                </div>
+                <div class="inline-input" fxLayout="row" fxLayout.xs="column">
+                    <mat-form-field fxFlex="100">
+                        <mat-label>Votre date de naissance</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="dnaissance">
+
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button type="submit" class="next-step" mat-flat-button matStepperNext>Continuer</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Chargez vos images">
+            <form [formGroup]="secondFormGroup" fxLayout="column" (ngSubmit)="secondFormValues()">
+
+
+                <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap.xs="10" fxLayoutGap.sm="10"  class="partie-photos">
+                    <div class="photo-profil" fxFlex="48">
+                        <label for="">Photo de profil</label>
+                        <input type="file" formControlName="profilImg" (change)="selectFile($event)" name="file" id="file">
+                        <div class="apercue-img">
+                            <img class="img-profil" [src]="userData?.profilImg" alt="">
+                        </div>
+                    </div>
+                    <div fxFlex="4"></div>
+                    <div class="photo-cover" fxFlex="48">
+                        <label for="">Photo de couverture</label>
+                        <input type="file" formControlName="coverImg" (change)="coverEvent($event)">
+                        <div class="apercue-img">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="next-step-red"  mat-flat-button matStepperPrevious>Retour</button>
+                    <button class="next-step"  mat-flat-button matStepperNext type="submit">Continuer</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Valider vos informations</ng-template>
+            <p>You are now done.</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</section>

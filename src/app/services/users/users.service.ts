@@ -50,4 +50,26 @@ export class UsersService {
     );
   }
 
+  updateUserProfilImg(urlImg: string, userID?: string): Promise<void> {
+    const userDoc = this.userCollection.doc(userID);
+    return userDoc.get().toPromise().then((docSnapshot) => {
+      if (docSnapshot?.exists) {
+        return userDoc.update({ profilImg: urlImg });
+      } else {
+        throw new Error("User does not exist");
+      }
+    });
+  }
+
+  updateUserCoverImg(urlImg: string, userID?: string): Promise<void> {
+    const userDoc = this.userCollection.doc(userID);
+    return userDoc.get().toPromise().then((docSnapshot) => {
+      if (docSnapshot?.exists) {
+        return userDoc.update({ coverImg: urlImg });
+      } else {
+        throw new Error("User does not exist");
+      }
+    });
+  }
+
 }

@@ -21,4 +21,8 @@ export class ToolbarComponent {
     this.router.navigate(['LandingPage']);
   }
 
+  voirProfil(){
+    this.router.navigate(['profil']);
+  }
+
 }
